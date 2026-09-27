@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F6F8;
+  color: #0B1220;
+}
+
+::selection {
+  background-color: #0EA5A4;
+  color: #F5F6F8;
+}
+
+:focus-visible {
+  outline: 2px solid #0EA5A4;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container-content {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-content {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Brand gradient system — used deliberately for CTAs, the Vision section
+   and a few accent moments, rather than scattered across every element. */
+.bg-gradient-brand {
+  background-image: linear-gradient(135deg, #0EA5A4 0%, #6D5DFC 100%);
+}
+
+.bg-gradient-brand-hover:hover {
+  background-image: linear-gradient(135deg, #0B8483 0%, #5747E0 100%);
+}
+
+.text-gradient-brand {
+  background-image: linear-gradient(135deg, #0EA5A4 0%, #6D5DFC 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-mesh-brand {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(14, 165, 164, 0.22), transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(109, 93, 252, 0.22), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(255, 176, 32, 0.12), transparent 55%);
+}
+
